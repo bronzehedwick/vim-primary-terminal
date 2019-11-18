@@ -46,12 +46,9 @@ augroup END " }}}
 
 " Mappings {{{
 
-if !exists(":T")
-  command -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
-endif
+command! -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
 
 nnoremap <Plug>PrimaryTerminalOpen :call <SID>Open()<CR>
-" nnoremap <SID>PrimaryTerminalOpen :call <SID>PrimaryTerminalOpen()<CR>
 
 " }}}
 
