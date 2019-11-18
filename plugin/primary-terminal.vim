@@ -47,6 +47,7 @@ augroup END " }}}
 " Mappings {{{
 
 command! -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
+command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
 
 nnoremap <Plug>PrimaryTerminalOpen :call <SID>Open()<CR>
 
