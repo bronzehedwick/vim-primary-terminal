@@ -28,10 +28,15 @@ function! s:PrimaryTerminalCommand(bang, command) " {{{
   call jobsend(g:primary_terminal_job_id, a:command . "\<CR>")
 endfunction " }}}
 
-function! s:Open() " {{{
+function! s:Open(window_type) " {{{
   if exists('g:primary_terminal_buffer_id')
-    :execute 'buffer' . g:primary_terminal_buffer_id
+    :execute a:window_type . ' ' . g:primary_terminal_buffer_id
   else
+    if a:window_type == 'sbuffer'
+      :split
+    elseif a:window_type == 'vert sbuffer'
+      :vertical split
+    endif
     :terminal
   endif
 endfunction " }}}
@@ -49,7 +54,9 @@ augroup END " }}}
 command! -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
 command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
 
-nnoremap <Plug>PrimaryTerminalOpen :call <SID>Open()<CR>
+nnoremap <Plug>PrimaryTerminalOpen :call <SID>Open('buffer')<CR>
+nnoremap <Plug>PrimaryTerminalOpenSplit :call <SID>Open('sbuffer')<CR>
+nnoremap <Plug>PrimaryTerminalOpenVsplit :call <SID>Open('vert sbuffer')<CR>
 
 " }}}
 
