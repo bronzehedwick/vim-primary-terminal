@@ -2,7 +2,7 @@
 " Maintainer: Chris DeLuca <https://www.chrisdeluca.me/>
 " Version: 0.0.0
 
-if exists('g:loaded_primaryterminal') || &cp || v:version < 700 || !has('nvim') " {{{
+if exists('g:loaded_primaryterminal') || &cp || v:version < 800 || !has('nvim') " {{{
   finish
 endif
 let g:loaded_primaryterminal = 1 " }}}
