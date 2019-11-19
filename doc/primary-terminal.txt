@@ -1,0 +1,32 @@
+*primary-terminal.txt* Simple management the built-in terminal.
+*primary-terminal*
+
+=============================================================================
+CONTENTS                                            *primary-terminal-contents*
+
+1. Intro...............................................|primary-terminal-intro|
+2. Quick start...................................|primary-terminal-quick-start|
+3. Commands.........................................|primary-terminal-commands|
+4. Mappings.........................................|primary-terminal-mappings|
+5. About...............................................|primary-terminal-about|
+6. License...........................................|primary-terminal-license|
+
+=============================================================================
+1. Intro                                               *primary-terminal-intro*
+
+=============================================================================
+2. Quick start                                   *primary-terminal-quick-start*
+
+=============================================================================
+3. Commands                                         *primary-terminal-commands*
+
+=============================================================================
+4. Mappings                                         *primary-terminal-mappings*
+
+=============================================================================
+5. About                                               *primary-terminal-about*
+
+=============================================================================
+6. License                                           *primary-terminal-license*
+
+ vim:tw=78:sw=4:ts=8:ft=help:norl:
