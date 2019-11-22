@@ -1,32 +1,36 @@
-*primary-terminal.txt* Simple management the built-in terminal.
+*primary-terminal.txt* Simple management of the built-in terminal.
 *primary-terminal*
 
 =============================================================================
 CONTENTS                                            *primary-terminal-contents*
 
-1. Intro...............................................|primary-terminal-intro|
-2. Quick start...................................|primary-terminal-quick-start|
-3. Commands.........................................|primary-terminal-commands|
-4. Mappings.........................................|primary-terminal-mappings|
-5. About...............................................|primary-terminal-about|
-6. License...........................................|primary-terminal-license|
+    1. About........................................|primary-terminal-about|
+    2. Commands.....................................|primary-terminal-commands|
+    3. Mappings.....................................|primary-terminal-mappings|
+    4. Issues.......................................|primary-terminal-issues|
+    5. License......................................|primary-terminal-license|
 
 =============================================================================
-1. Intro                                               *primary-terminal-intro*
+ABOUT                                                  *primary-terminal-about*
 
 =============================================================================
-2. Quick start                                   *primary-terminal-quick-start*
+COMMANDS                                            *primary-terminal-commands*
 
 =============================================================================
-3. Commands                                         *primary-terminal-commands*
+MAPPINGS                                            *primary-terminal-mappings*
 
 =============================================================================
-4. Mappings                                         *primary-terminal-mappings*
+ISSUES                                                *primary-terminal-issues*
+
+Bug reports and pull requsts are welcome!
+
+Visit https://github.com/bronzehedwick/vim-primary-terminal/issues
 
 =============================================================================
-5. About                                               *primary-terminal-about*
+LICENSE                                              *primary-terminal-license*
 
-=============================================================================
-6. License                                           *primary-terminal-license*
+Copyright © 2019 Chris DeLuca
+
+Licensed under the same terms as Vim itself.
 
  vim:tw=78:sw=4:ts=8:ft=help:norl:
