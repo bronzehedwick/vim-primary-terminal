@@ -69,6 +69,10 @@ augroup END " }}}
 command! -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
 command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
 
+command! PrimaryTerminalOpen call <SID>Open('buffer')
+command! PrimaryTerminalOpenSplit call <SID>Open('sbuffer')
+command! PrimaryTerminalOpenVsplit call <SID>Open('vert sbuffer')
+
 nnoremap <Plug>(PrimaryTerminalOpen) :call <SID>Open('buffer')<CR>
 nnoremap <Plug>(PrimaryTerminalOpenSplit) :call <SID>Open('sbuffer')<CR>
 nnoremap <Plug>(PrimaryTerminalOpenVsplit) :call <SID>Open('vert sbuffer')<CR>
