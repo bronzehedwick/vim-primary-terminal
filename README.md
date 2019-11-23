@@ -59,6 +59,7 @@ nmap <unique> <silent> <leader>y <Plug>(PrimaryTerminalOpenVsplit)
 - [neoterm](https://github.com/kassio/neoterm)
 - [terminus](https://github.com/brettanomyces/nvim-terminus)
 - [editcommand](https://github.com/brettanomyces/nvim-editcommand)
+- [nuake](https://github.com/Lenovsky/nuake)
 
 ## TODO
 
