@@ -1,32 +1,69 @@
-*primary-terminal.txt* Simple management of the built-in terminal.
-*primary-terminal*
+*primary-terminal.txt* Simple management of the built-in terminal
 
-=============================================================================
-CONTENTS                                            *primary-terminal-contents*
+Author: Chris DeLuca <https://www.chrisdeluca.me/>
+License: Same terms as Vim itself (see |primary-terminal-license|)
 
-    1. About........................................|primary-terminal-about|
-    2. Commands.....................................|primary-terminal-commands|
-    3. Mappings.....................................|primary-terminal-mappings|
-    4. Issues.......................................|primary-terminal-issues|
-    5. License......................................|primary-terminal-license|
+ABOUT                                                        *primary-terminal*
 
-=============================================================================
-ABOUT                                                  *primary-terminal-about*
+vim-primary-terminal is a dead simple terminal manager for Neovim (and
+eventually Vim 8).
 
-=============================================================================
+It provides thin conveince wrappers around core terminal functionality,
+focused on managing a single terminal instance.
+
+Basically, this plugin is proud to barely do anything.
+
+The first time a 'terminal' is created, vim-primary-terminal identifies
+it as the primary terminal, applying mappings and commands to quickly
+switch to and send input to that buffer. This primary designation
+persists until the buffer is destroyed; after that, the next 'terminal'
+created becomes the primary terminal.
+
+Commands and mappings that manage the primary terminal will create a new
+'terminal' if one doesn't already exist.
+
+That's it.
+
 COMMANDS                                            *primary-terminal-commands*
 
-=============================================================================
+vim-primary-terminal provides the following commands:
+
+                                                    *:PrimaryTerminalOpen*
+:PrimaryTerminalOpen        Open the primary terminal buffer in the current
+                            window.
+
+                                                    *:PrimaryTerminalOpenSplit*
+:PrimaryTerminalOpenSplit   Open the primary terminal buffer in a horizontal
+                            split window.
+
+                                                    *:PrimaryTerminalOpenVsplit*
+:PrimaryTerminalOpenVsplit  Open the primary terminal buffer in a vertical
+                            split window.
+
+                                                    *:T*
+:T {args}                   Send {args} to the primary terminal.
+
+                                                    *:T!*
+:T! {args}                  Like |:T|, but load the primary terminal buffer in
+                            the preview window.
+
+                                                    *:Tkill*
+:Tkill                      Send `Ctrl-c` to the terminal.
+
 MAPPINGS                                            *primary-terminal-mappings*
 
-=============================================================================
+vim-primary-terminal provides the following |<Plug>| mappings:
+
+<Plug>(PrimaryTerminalOpen)          Execute :PrimaryTerminalOpen
+<Plug>(PrimaryTerminalOpenSplit)     Execute :PrimaryTerminalOpenSplit
+<Plug>(PrimaryTerminalOpenVsplit)    Execute :PrimaryTerminalOpenVsplit
+
 ISSUES                                                *primary-terminal-issues*
 
 Bug reports and pull requsts are welcome!
 
 Visit https://github.com/bronzehedwick/vim-primary-terminal/issues
 
-=============================================================================
 LICENSE                                              *primary-terminal-license*
 
 Copyright © 2019 Chris DeLuca
