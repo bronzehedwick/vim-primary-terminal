@@ -56,7 +56,7 @@ endfunction " }}}
 
 " Autocommands registered when the terminal opens and closes,
 " which calls the s:Setup and s:Teardown functions.
-augroup terminal " {{{
+augroup primaryterminal " {{{
   autocmd!
   " Setup primary terminal.
   autocmd TermOpen * call s:Setup()
