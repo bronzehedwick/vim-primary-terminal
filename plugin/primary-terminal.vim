@@ -45,9 +45,9 @@ function! s:Open(window_type) " {{{
   if exists('g:primary_terminal_buffer_id')
     :execute a:window_type . ' ' . g:primary_terminal_buffer_id
   else
-    if a:window_type == 'sbuffer'
+    if a:window_type ==# 'sbuffer'
       :split
-    elseif a:window_type == 'vert sbuffer'
+    elseif a:window_type ==# 'vert sbuffer'
       :vertical split
     endif
     :terminal
