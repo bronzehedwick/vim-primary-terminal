@@ -1,6 +1,6 @@
 " primary-terminal.vim - Simple terminal management
 " Maintainer: Chris DeLuca <https://www.chrisdeluca.me/>
-" Version: 0.1.0
+" Version: 0.1.1
 
 if exists('g:loaded_primaryterminal') || &cp || v:version < 800 || !has('nvim') " {{{
   finish
