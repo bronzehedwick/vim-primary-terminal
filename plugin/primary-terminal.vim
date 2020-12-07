@@ -14,7 +14,6 @@ let g:loaded_primaryterminal = 1 " }}}
 " - Buffer file path, for opening the preview window
 function! s:Setup() " {{{
   if !exists('g:primary_terminal_job_id')
-        \ || bufnr(g:primary_terminal_job_id) == -1
     let g:primary_terminal_job_id = b:terminal_job_id
     let g:primary_terminal_buffer_file = expand('%:p')
     let g:primary_terminal_buffer_id = bufnr('%')
@@ -44,7 +43,6 @@ endfunction " }}}
 " Should be one of 'buffer', 'sbuffer', or 'vertical sbuffer'.
 function! s:Open(window_type) " {{{
   if exists('g:primary_terminal_buffer_id')
-        \ && bufnr(g:primary_terminal_buffer_id) >= 0
     :execute a:window_type . ' ' . g:primary_terminal_buffer_id
   else
     if a:window_type ==# 'sbuffer'
