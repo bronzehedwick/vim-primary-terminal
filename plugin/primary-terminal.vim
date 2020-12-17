@@ -1,6 +1,5 @@
 " primary-terminal.vim - Simple terminal management
 " Maintainer: Chris DeLuca <https://www.chrisdeluca.me/>
-" Version: 0.1.1
 
 if exists('g:loaded_primaryterminal') || &cp || v:version < 800 || !has('nvim') " {{{
   finish
@@ -13,6 +12,10 @@ let g:loaded_primaryterminal = 1 " }}}
 " - Buffer id, for mappings to switch buffers
 " - Buffer file path, for opening the preview window
 function! s:Setup() " {{{
+  if !exists('b:terminal_job_id') && !exists('g:primary_terminal_job_id')
+    :split
+    :terminal
+  endif
   if !exists('g:primary_terminal_job_id')
     let g:primary_terminal_job_id = b:terminal_job_id
     let g:primary_terminal_buffer_file = expand('%:p')
@@ -32,6 +35,7 @@ endfunction " }}}
 " Function to send arbitrary commands to the primary terminal.
 " Opens the result in the preview window if ! is supplied.
 function! s:PrimaryTerminalCommand(bang, command) " {{{
+  call s:Setup()
   if a:bang
     :execute 'pedit ' . g:primary_terminal_buffer_file
   endif
