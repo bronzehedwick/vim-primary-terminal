@@ -69,8 +69,7 @@ augroup primaryterminal " {{{
 augroup END " }}}
 
 " Mappings {{{
-
-command! -nargs=1 -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
+command! -nargs=1 -complete=file_in_path -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
 command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
 
 command! PrimaryTerminalOpen call <SID>Open('buffer')
