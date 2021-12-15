@@ -69,6 +69,6 @@ nmap <unique> <silent> <leader>y <Plug>(PrimaryTerminalOpenVsplit)
 
 ## License
 
-Copyright © 2019–2020 Chris DeLuca
+Copyright © 2019–2021 Chris DeLuca
 
 Licensed under the same terms as Vim itself.
