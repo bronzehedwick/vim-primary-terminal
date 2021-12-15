@@ -15,8 +15,13 @@ If I do need another one, it's easy enough to create another un-managed
 
 ## Installation
 
-If you're using a plugin manager, such as [minpac](https://github.com/k-takata/minpac),
-follow the instructions in their documentation.
+If you're using a plugin manager, follow the instructions in their documentation.
+
+For example, if you're using [Packer](https://github.com/wbthomason/packer.nvim), you would add the following to your configuration:
+
+```lua
+use 'bronzehedwick/vim-primary-terminal'
+```
 
 Otherwise, use [native package support](https://neovim.io/doc/user/repeat.html#packages) by cloning vim-primary-terminal to [`packpath`](https://neovim.io/doc/user/options.html#packpath).
 
