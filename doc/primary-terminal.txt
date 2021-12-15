@@ -40,6 +40,14 @@ vim-primary-terminal provides the following commands:
 :PrimaryTerminalOpenVsplit  Open the primary terminal buffer in a vertical
                             split window.
 
+                                                    *:PrimaryTerminalOpenDynamic*
+:PrimaryTerminalOpenDynamic Open the primary terminal buffer in either a
+                            horizontal or vertical split window. If the
+                            current window is less than 120 columns, the
+                            window will be horizontal. Otherwise, it will be
+                            vertical. 120 was chosen as a rough estimate for
+                            space enough for 2 side-by-side windows.
+
                                                     *:T*
 :T {args}                   Send {args} to the primary terminal.
 

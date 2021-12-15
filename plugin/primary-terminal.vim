@@ -46,6 +46,14 @@ endfunction " }}}
 " Takes an argument to change the window splitting behavior.
 " Should be one of 'buffer', 'sbuffer', or 'vertical sbuffer'.
 function! s:Open(window_type) " {{{
+  if a:window_type ==# 'dynamic'
+    if winwidth(0) < 120
+      call s:Open('sbuffer')
+    else
+      call s:Open('vert sbuffer')
+    endif
+    return
+  endif
   if exists('g:primary_terminal_buffer_id')
     :execute a:window_type . ' ' . g:primary_terminal_buffer_id
   else
@@ -56,6 +64,7 @@ function! s:Open(window_type) " {{{
     endif
     :terminal
   endif
+  setlocal filetype=primary-terminal
 endfunction " }}}
 
 " Autocommands registered when the terminal opens and closes,
@@ -75,10 +84,12 @@ command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
 command! PrimaryTerminalOpen call <SID>Open('buffer')
 command! PrimaryTerminalOpenSplit call <SID>Open('sbuffer')
 command! PrimaryTerminalOpenVsplit call <SID>Open('vert sbuffer')
+command! PrimaryTerminalOpenDynamic call <SID>Open('dynamic')
 
 nnoremap <Plug>(PrimaryTerminalOpen) :call <SID>Open('buffer')<CR>
 nnoremap <Plug>(PrimaryTerminalOpenSplit) :call <SID>Open('sbuffer')<CR>
 nnoremap <Plug>(PrimaryTerminalOpenVsplit) :call <SID>Open('vert sbuffer')<CR>
+nnoremap <Plug>(PrimaryTerminalOpenDynamic) :call <SID>Open('dynamic')<CR>
 
 " }}}
 

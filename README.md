@@ -47,6 +47,7 @@ vim-primary-terminal provides the following [`<Plug>`](https://neovim.io/doc/use
 - `<Plug>(PrimaryTerminalOpen)`: Execute `:PrimaryTerminalOpen`
 - `<Plug>(PrimaryTerminalOpenSplit)`: Execute `:PrimaryTerminalOpenSplit`
 - `<Plug>(PrimaryTerminalOpenVsplit)`: Execute `:PrimaryTerminalOpenVsplit`
+- `<Plug>(PrimaryTerminalOpenDynamic)`: Execute `:PrimaryTerminalOpenDynamic`
 
 Using `<Plug>` allows you to customize if and what key sequences to map to.
 
@@ -57,7 +58,10 @@ your `init.vim`:
 nmap <unique> <silent> <leader>t <Plug>(PrimaryTerminalOpen)
 nmap <unique> <silent> <leader>r <Plug>(PrimaryTerminalOpenSplit)
 nmap <unique> <silent> <leader>y <Plug>(PrimaryTerminalOpenVsplit)
+nmap <unique> <silent> <leader>d <Plug>(PrimaryTerminalOpenDynamic)
 ```
+
+See [`:help primary-terminal`](./doc/primary-terminal.txt) for more.
 
 ## Similar projects
 
