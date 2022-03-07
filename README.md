@@ -1,6 +1,6 @@
 # Primary Terminal
 
-Simple terminal management for Neovim (and eventually Vim 8).
+Simple terminal management for Neovim.
 
 ## Why another terminal manager?
 
@@ -15,15 +15,21 @@ If I do need another one, it's easy enough to create another un-managed
 
 ## Installation
 
-If you're using a plugin manager, follow the instructions in their documentation.
+If you're using a plugin manager, follow the instructions in their
+documentation.
 
-For example, if you're using [Packer](https://github.com/wbthomason/packer.nvim), you would add the following to your configuration:
+For example, if you're using
+[Packer](https://github.com/wbthomason/packer.nvim), you would add the
+following to your configuration:
 
 ```lua
 use 'bronzehedwick/vim-primary-terminal'
 ```
 
-Otherwise, use [native package support](https://neovim.io/doc/user/repeat.html#packages) by cloning vim-primary-terminal to [`packpath`](https://neovim.io/doc/user/options.html#packpath).
+Otherwise, use [native package
+support](https://neovim.io/doc/user/repeat.html#packages)
+by cloning vim-primary-terminal to
+[`packpath`](https://neovim.io/doc/user/options.html#packpath).
 
 ```sh
 git clone https://github.com/bronzehedwick/vim-primary-terminal \
@@ -42,7 +48,8 @@ vim-primary-terminal provides the following commands:
 
 ## Key mappings
 
-vim-primary-terminal provides the following [`<Plug>`](https://neovim.io/doc/user/map.html#%3CPlug%3E) mappings:
+vim-primary-terminal provides the following
+[`<Plug>`](https://neovim.io/doc/user/map.html#%3CPlug%3E) mappings:
 
 - `<Plug>(PrimaryTerminalOpen)`: Execute `:PrimaryTerminalOpen`
 - `<Plug>(PrimaryTerminalOpenSplit)`: Execute `:PrimaryTerminalOpenSplit`
@@ -72,12 +79,8 @@ See [`:help primary-terminal`](./doc/primary-terminal.txt) for more.
 - [nuake](https://github.com/Lenovsky/nuake)
 - [split term](https://github.com/vimlab/split-term.vim)
 
-## TODO
-
-- [ ] Vim 8 support
-
 ## License
 
-Copyright © 2019–2021 Chris DeLuca
+Copyright © 2019–2022 Chris DeLuca
 
 Licensed under the same terms as Vim itself.
