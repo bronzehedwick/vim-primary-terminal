@@ -67,6 +67,16 @@ function! s:Open(window_type) " {{{
   setlocal filetype=primary-terminal
 endfunction " }}}
 
+" Autocommands registered when the terminal opens and closes,
+" which calls the s:Setup and s:Teardown functions.
+augroup primaryterminal " {{{
+  autocmd!
+  " Setup primary terminal.
+  autocmd TermOpen * call s:Setup()
+  " Remove primary terminal if it's closed.
+  autocmd TermClose * call s:Teardown()
+augroup END " }}}
+
 " Mappings {{{
 command! -nargs=1 -complete=file_in_path -bang T call s:PrimaryTerminalCommand(<bang>0, <q-args>)
 command! Tkill call jobsend(g:primary_terminal_job_id, "\<c-c>")
